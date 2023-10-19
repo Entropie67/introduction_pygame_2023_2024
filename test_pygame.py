@@ -16,3 +16,16 @@ pygame.display.set_caption("Mon jeu")
 clock = pygame.time.Clock()
 # Répétition d'une touche
 pygame.key.set_repeat(50, 10)
+
+###############################
+#       Le fond               #
+###############################
+# Un fond en couleur
+VIOLET = (127, 0, 255) # Format RGB
+# fill pour remplir la fenêtre de la couleur donnée.
+fenetre.fill(VIOLET)
+# Une image de fond
+fond = pygame.image.load("images/sable.jpg").convert()
+# Maintenant il faut coller l'image dans la fenêtre au coordonnées (0, 0)
+fenetre.blit(fond, (0, 0))
+pygame.display.flip()
