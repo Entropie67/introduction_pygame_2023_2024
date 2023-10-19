@@ -28,7 +28,20 @@ fenetre.fill(VIOLET)
 fond = pygame.image.load("images/sable.jpg").convert()
 # Maintenant il faut coller l'image dans la fenêtre au coordonnées (0, 0)
 fenetre.blit(fond, (0, 0))
-
+###############################
+#       Le perso              #
+###############################
+# On charge l'image
+diana = pygame.image.load("images/Diana.png").convert_alpha()
+# On change un peu la taille
+diana = pygame.transform.scale(diana, (64, 64))
+# On crée un rectangle de la même taille que Diana
+diana_rec = diana.get_rect()
+# On place ce rectangle
+diana_rec.left = 200
+diana_rec.top = 200
+# Et enfin, on colle l'image dans le rectangle.
+fenetre.blit(diana, diana_rec)
 ###############################
 #      La boucle de jeu       #
 ###############################
