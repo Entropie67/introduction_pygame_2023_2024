@@ -57,5 +57,6 @@ while continuer:
                 print("touche Droite")
                 diana_rec.left += 5
     # On rafraichit à chaque tour de boucle.
+    fenetre.blit(fond, (0, 0))
     fenetre.blit(diana, diana_rec)
     pygame.display.flip()
