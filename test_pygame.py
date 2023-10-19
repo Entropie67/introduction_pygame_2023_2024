@@ -52,5 +52,10 @@ while continuer:
         # la croix en haut à droite
         if event.type == QUIT:
             continuer = False
+        elif event.type == KEYDOWN:  # appui sur une touche
+            if event.key == K_RIGHT:
+                print("touche Droite")
+                diana_rec.left += 5
     # On rafraichit à chaque tour de boucle.
+    fenetre.blit(diana, diana_rec)
     pygame.display.flip()
